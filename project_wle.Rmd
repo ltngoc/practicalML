@@ -21,6 +21,7 @@ partition <- createFolds(y = ds$classe, k = 10)
 ```
 
 Following are preprocess steps I used to select features. Here I use the first partition to illustrate the idea.
+
 3. Pick first partition
 ```{r}
 valid.set.1 <- ds[partition$Fold01, ]
@@ -28,6 +29,7 @@ train.set.1 <- ds[-partition$Fold01, ]
 ```
 
 4. Preprocess stage has the following steps:
+
 * Remove the first 7 columns since they are not relevant
 ```{r}
 train.set.1 <- train.set.1[ ,-(1:7)]
