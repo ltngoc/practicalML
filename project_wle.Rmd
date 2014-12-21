@@ -10,7 +10,6 @@ library(caret)
 library(plyr)
 ```
 
-
 1. Load ds 
 ```{r}
 ds <- read.csv("pml-training.csv", header = T)
@@ -48,7 +47,7 @@ ncol(train.set.1)
 ncol(valid.set.1)
 ```
 
-* Exclude predictors with nearly zero variability
+* Exclude predictors with nearly zero variance
 ```{r}
 nzv.info <- nearZeroVar(train.set.1, saveMetrics = T)
 nz.vars <- which(nzv.info$nzv == T)
